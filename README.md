@@ -144,8 +144,7 @@ miniImageNet数据集的原始结构如下：
 
 ## 4 Notebook说明  
 
-本案例的主体为端到端可执行的Notebook文件：swin_transformer.ipynb  
-该文件主要包括四个部分：  
+本案例的主体为端到端可执行的Notebook文件：**swin_transformer.ipynb**，该文件主要包括四个部分：  
 ### 4.1 SwinTransformer模型定义
 模型类SwinTransformer的定义与继承关系如下：  
 ```text
