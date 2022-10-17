@@ -37,10 +37,8 @@ Swin Transfromer的基本结构如图1(d)所示，由4个层级式模块组成�
     <div style="color:orange;
     display: inline-block;
     color: #999;
-    <center> padding: 3px;">图1 Swin Transformer模型结构图</div> </center> 
+    <center> padding: 3px;">图1 Swin Transformer模型结构图 </center> </div>
 </center>
-
-
 
 ### 1.3 Swin Transformer模块原理
 
@@ -52,8 +50,8 @@ Swin Transformer的亮点在于采用滑动窗口机制，提取窗口之间的�
 
 ### 1.4 模型特点
 
-1. 基于滑动窗口的自注意力计算，交替使用W-MSA、SW-MSA，解决transformer应用于计算机视觉领域所产生的计算复杂度高的问题；
-2. 借鉴CNN架构，对图像进行降采样，捕获多尺寸层次的全局特征。
+- 基于滑动窗口的自注意力计算，交替使用W-MSA、SW-MSA，解决transformer应用于计算机视觉领域所产生的计算复杂度高的问题；
+- 借鉴CNN架构，对图像进行降采样，捕获多尺寸层次的全局特征。
 
 ## 2 数据集简介
 
@@ -148,35 +146,35 @@ miniImageNet数据集的原始结构如下：
 
 本案例的主体为端到端可执行的Notebook文件：swin_transformer.ipynb  
 该文件主要包括四个部分：  
-- SwinTransformer模型定义
-    - 模型类SwinTransformer的定义与继承关系如下：  
-        ```text
-        SwinTransformer
-            ├─ PatchEmbed
-            └─ BasicLayer
-                ├─ PatchMerging
-                └─ SwinTransformerBlock
-                    ├─ WindowAttention
-                    ├─ RelativeBias
-                    ├─ DropPath1D
-                    ├─ Mlp
-                    ├─ Roll
-                    ├─ WindowPartitionConstruct
-                    └─ WindowReverseConstruct
-        ```
-- miniImageNet数据集引入
-    - 从对应路径中读取训练/验证/测试数据
-    - 数据增强
-- 训练
-    - 设置精度水平
-    - 定义Loss函数
-    - 定义单步训练
-    - 定义学习率、优化器和模型的获取函数
-    - 定义EvaluateCallBack，保存在验证集上指标最优的模型
-    - 载入数据、设置环境、初始化模型、训练
-- 评估（测试）
-    - 载入在验证集上指标最优的模型
-    - 在测试集上测试
+### 4.1 SwinTransformer模型定义
+模型类SwinTransformer的定义与继承关系如下：  
+```text
+SwinTransformer
+    ├─ PatchEmbed
+    └─ BasicLayer
+        ├─ PatchMerging
+        └─ SwinTransformerBlock
+            ├─ WindowAttention
+            ├─ RelativeBias
+            ├─ DropPath1D
+            ├─ Mlp
+            ├─ Roll
+            ├─ WindowPartitionConstruct
+            └─ WindowReverseConstruct
+```
+### 4.2 miniImageNet数据集引入
+- 从对应路径中读取训练/验证/测试数据
+- 数据增强
+### 4.3 训练
+- 设置精度水平
+- 定义Loss函数
+- 定义单步训练
+- 定义学习率、优化器和模型的获取函数
+- 定义EvaluateCallBack，保存在验证集上指标最优的模型
+- 载入数据、设置环境、初始化模型、训练
+### 4.4 评估（测试）
+- 载入在验证集上指标最优的模型
+- 在测试集上测试
 
 ## 评估性能
 
