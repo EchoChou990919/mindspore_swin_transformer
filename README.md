@@ -37,7 +37,8 @@ Swin Transfromer的基本结构如图1(d)所示，由4个层级式模块组成�
     <div style="color:orange;
     display: inline-block;
     color: #999;
-    <center> padding: 3px;">图1 Swin Transformer模型结构图 </center> </div>
+    padding: 3px;">
+    <center> 图1 Swin Transformer模型结构图 </center> </div>
 </center>
 
 ### 1.3 Swin Transformer模块原理
