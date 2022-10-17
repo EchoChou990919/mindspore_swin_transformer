@@ -55,7 +55,7 @@ Swin Transformer的亮点在于采用滑动窗口机制，提取窗口之间的�
 1. 基于滑动窗口的自注意力计算，交替使用W-MSA、SW-MSA，解决transformer应用于计算机视觉领域所产生的计算复杂度高的问题；
 2. 借鉴CNN架构，对图像进行降采样，捕获多尺寸层次的全局特征。
 
-## 数据集简介
+## 2 数据集简介
 
 所使用的数据集：miniImageNet  
 - 数据集大小：共100类，60000张图像，每类600张图像  
@@ -73,7 +73,7 @@ miniImageNet数据集的原始结构如下：
     ├─ val.csv
     └─ test.csv
 ```
-匹配图像与CSV文件后，数据集结构变为：
+匹配图像与CSV文件后，数据集结构变为：  
 ```text
 └─ dataset
     ├─ train
@@ -95,7 +95,7 @@ miniImageNet数据集的原始结构如下：
         └─ 第100类
             └─ 600张图像 
 ```
-仍需进一步将数据集结构处理为：
+仍需进一步将数据集结构处理为：  
 ```text
 └─ dataset
     ├─ train
@@ -122,9 +122,9 @@ miniImageNet数据集的原始结构如下：
 
 请将数据集保存至路径“mindspore_swin_transformer/src/data”下，并逐层解压文件。
 
-## 仓库说明
+## 3 仓库说明
 
-仓库结构为：
+仓库结构为：  
 ```text
 └─ swin_transformer
     ├─ src
@@ -135,21 +135,21 @@ miniImageNet数据集的原始结构如下：
             ├─ augment            // 数据增强函数文件
                 ├─ auto_augment.py
                 ├─ mixup.py
-                ├─ random_erasing.py
+                └─ random_erasing.py
             └─ imagenet           // miniImageNet数据集
                 ├─ train
                 ├─ val
-                ├─ test
+                └─ test
     ├─ swin_transformer.ipynb     // 端到端可执行的Notebook文件
     └─ README.md
 ```
 
-## Notebook说明  
+## 4 Notebook说明  
 
 本案例的主体为端到端可执行的Notebook文件：swin_transformer.ipynb  
 该文件主要包括四个部分：  
 - SwinTransformer模型定义
-    - 模型类SwinTransformer的定义与继承关系如下：
+    - 模型类SwinTransformer的定义与继承关系如下：  
         ```text
         SwinTransformer
             ├─ PatchEmbed
