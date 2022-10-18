@@ -77,7 +77,7 @@ def parse_arguments():
     parser.add_argument("--swin_config", help="Config file to use (see configs dir)", default='./src/configs/swin_tiny_patch4_window7_224.yaml')
     # parser.add_argument("--swin_config", help="Config file to use (see configs dir)", default=None, required=True)
     parser.add_argument("--seed", default=0, type=int, help="seed for initializing training. ")
-    parser.add_argument("--save_every", default=2, type=int, help="Save every ___ epochs(default:2)")
+    parser.add_argument("--save_every", default=5, type=int, help="Save every ___ epochs(default:2)")
     parser.add_argument("--label_smoothing", type=float, help="Label smoothing to use, default 0.0", default=0.1)
     parser.add_argument("--image_size", default=224, help="Image Size.", type=int)
     parser.add_argument('--train_url', default="./", help='Location of training outputs.')
