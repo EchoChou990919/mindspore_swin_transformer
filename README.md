@@ -180,13 +180,13 @@ SwinTransformer
 
 miniImageNet上的SwinTransformer
 
-| 参数 | GPU  |
+| 属性 | 情况  |
 | --- | --- |
 | 模型 | SwinTransformer|
 | 模型版本 | swin_tiny_patch4_window7_224 |
 | 资源 | Gefore RTX 3090 * 1 |
 | MindSpore版本 | 1.8.1 |
 | 验证集 | miniImageNet Val，共6,000张图像 |
-| 验证集分类准确率 | top1:55.32%, top5:81.05% |
+| 验证集分类准确率 | Top1-Acc: 55.32%, Top5-Acc: 81.05% |
 | 测试集 | miniImageNet Test，共12,000张图像 |
-| 测试集分类准确率 | top1:55.26%, top5:81.59% |
+| 测试集分类准确率 | Top1-Acc: 55.26%, Top5-Acc: 81.59% |
